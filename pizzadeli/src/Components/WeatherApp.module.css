@@ -1,0 +1,7 @@
+.container{
+    margin-top: 20px;
+    display: grid;
+}
+.container div h2{
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+.Formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.Input{
+    width: 200px;
+    height: 40px;
+}
+
+.Btn{
+    background-color: salmon;
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    
+}
+.Btn:hover{
+    border-radius: 50%;
+    background-color: #ff7f50;
+    color: white;
+
+}
