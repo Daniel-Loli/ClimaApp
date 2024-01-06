@@ -9,7 +9,7 @@ const WeatherApp = () => {
 
   const fetchWeatherData = async (ciudad) => {
     if (ciudad.trim()) {
-      const apiKey = '711b79625e5358f4dbea26a3bce52351';  // Reemplaza con tu clave API real
+      const apiKey = '711b79625e5358f4dbea26a3bce52351';
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&lang=es`;
 
       try {
@@ -42,11 +42,11 @@ const WeatherApp = () => {
         )}
 
         <Cards
-          name={weatherData?.name} 
-          temperature={weatherData?.main?.temp}
-          humidity={weatherData?.main?.humidity}
-          latitude={weatherData?.coord?.lat}
-          longitude={weatherData?.coord?.lon}
+          name={weatherData?.name}  
+          content={weatherData?.main?.temp !== undefined ? (weatherData.main.temp - 273.15).toFixed(2) : ' '}
+          humedity={weatherData?.main?.humidity !== undefined ? weatherData.main.humidity.toFixed(2) : ' '}
+          lat={weatherData?.coord?.lat !== undefined ? weatherData.coord.lat.toFixed(2) : ' '}
+          lon={weatherData?.coord?.lon !== undefined ? weatherData.coord.lon.toFixed(2) : ' '} 
           imageUrl="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=600"
         />
       </div>
